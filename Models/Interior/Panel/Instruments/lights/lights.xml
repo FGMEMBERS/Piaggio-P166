@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <path>lights.ac</path>
+
+  <animation>
+    <object-name>base</object-name>
+    
+    <object-name>lamp1LOFF</object-name>
+    <object-name>lamp1ROFF</object-name>
+    <object-name>lamp2LOFF</object-name>
+    <object-name>lamp2ROFF</object-name>
+    <object-name>lamp3LOFF</object-name>
+    <object-name>lamp3ROFF</object-name>
+
+    <object-name>lamp1LON</object-name>
+    <object-name>lamp1RON</object-name>
+    <object-name>lamp2LON</object-name>
+    <object-name>lamp2RON</object-name>
+    <object-name>lamp3LON</object-name>
+    <object-name>lamp3RON</object-name>
+    
+  </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>lamp1LOFF</object-name>
+    <object-name>lamp1ROFF</object-name>
+    <object-name>lamp2LOFF</object-name>
+    <object-name>lamp2ROFF</object-name>
+    <emission>
+      <red>   0.50 </red>
+      <green> 0.00 </green>
+      <blue>  0.00 </blue>
+    </emission>
+  </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>lamp3LOFF</object-name>
+    <object-name>lamp3ROFF</object-name>
+    <emission>
+      <red>   0.50 </red>
+      <green> 0.50 </green>
+      <blue>  0.00 </blue>
+    </emission>
+  </animation>
+  
+  <animation>
+    <type>material</type>
+    <object-name>lamp1LON</object-name>
+    <object-name>lamp1RON</object-name>
+    <object-name>lamp2LON</object-name>
+    <object-name>lamp2RON</object-name>
+    <emission>
+      <red>   2 </red>
+      <green> 0 </green>
+      <blue>  0 </blue>
+    </emission>
+  </animation>
+  
+  <animation>
+    <type>material</type>
+    <object-name>lamp3LON</object-name>
+    <object-name>lamp3RON</object-name>
+    <emission>
+      <red>   2 </red>
+      <green> 2 </green>
+      <blue>  0 </blue>
+    </emission>
+  </animation>
+  
+</PropertyList>

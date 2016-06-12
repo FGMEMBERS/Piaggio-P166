@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <path>ittgauge.ac</path>
+
+  <animation>
+    <object-name>ITTBezel</object-name>
+    <object-name>ITTFace</object-name>
+    <object-name>ITT.needleL</object-name>
+    <object-name>ITT.needleR</object-name>
+    
+    <object-name>vitre</object-name>
+  </animation>
+
+  <!-- working for Rembrandt -->
+  <effect>
+    <inherits-from>Aircraft/Piaggio-P166/Models/Effects/Glass/glass</inherits-from>
+    <object-name>vitre</object-name>
+  </effect>
+  
+  <animation>
+    <type>material</type>
+    <object-name>ITTFace</object-name>
+    <object-name>ITT.needle</object-name>
+    <condition>
+      <property>/controls/electric/battery-switch</property>
+    </condition>
+    <emission>
+      <factor-prop>controls/lighting/luminosite-lights</factor-prop>
+      <red>   0.50 </red>
+      <green> 0.25 </green>
+      <blue>  0.25 </blue>
+    </emission>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>ITT.needleL</object-name>
+    <property>engines/engine[0]/torque-ftlb</property>
+    <interpolation>
+      <entry><ind>     0 </ind><dep>   0 </dep></entry>
+      <entry><ind> 21370 </ind><dep> 180 </dep></entry>
+    </interpolation>
+    <axis>
+      <x> -1 </x>
+      <y>  0 </y>
+      <z>  0 </z>
+    </axis>
+  </animation> 
+
+  <animation>
+    <type>rotate</type>
+    <object-name>ITT.needleR</object-name>
+    <property>engines/engine[1]/torque-ftlb</property>
+    <interpolation>
+      <entry><ind>     0 </ind><dep>   0 </dep></entry>
+      <entry><ind> 21370 </ind><dep> 180 </dep></entry>
+    </interpolation>
+    <axis>
+      <x> -1 </x>
+      <y>  0 </y>
+      <z>  0 </z>
+    </axis>
+  </animation> 
+  
+</PropertyList>
