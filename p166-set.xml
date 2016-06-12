@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList include="Systems/p166-base.xml">
+  
+  <sim>
+
+    <description>Piaggio P.166 Albatros (YASim)</description>
+    <author>BARANGER Emmanuel (3D/FDM)</author>
+    
+    <aircraft-version>0.1</aircraft-version>
+    <status>Alpha</status>
+    
+    <flight-model>yasim</flight-model>
+    <aero>Systems/p166-yasim</aero>
+    
+    <rating>
+      <FDM type="int">     2 </FDM>
+      <systems type="int"> 0 </systems>
+      <cockpit type="int"> 0 </cockpit>
+      <model type="int">   4 </model>
+    </rating>
+
+  </sim>
+
+</PropertyList>
