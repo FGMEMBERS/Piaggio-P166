@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <path>interior.ac</path>
+
+  <animation>
+    <!-- Objets opaques -->
+    <object-name>interieur</object-name>
+    <object-name>inttour</object-name>
+    <object-name>planchet</object-name>
+    <object-name>intporteG</object-name>
+    <object-name>intporteD</object-name>
+    <object-name>intbaieA</object-name>
+    <object-name>intbaieB</object-name>
+    
+    <!-- Objets transparents -->
+    <object-name>intvitres</object-name>
+    <object-name>intvitreporteG</object-name>
+    <object-name>intvitreporteD</object-name>
+    <object-name>intvitrebaieA</object-name>
+    <object-name>intvitrebaieB</object-name>
+  </animation>
+
+  <!-- working for Rembrandt -->
+  <effect>
+    <inherits-from>Effects/model-transparent</inherits-from>
+    <object-name>intvitres</object-name>
+    <object-name>intvitreporteG</object-name>
+    <object-name>intvitreporteD</object-name>
+    <object-name>intvitrebaieA</object-name>
+    <object-name>intvitrebaieB</object-name>
+  </effect>
+  
+  <!-- Panel -->
+  <model>
+    <path>Aircraft/Piaggio-P166/Models/Interior/Panel/panel.xml</path>
+    <offsets>
+      <x-m> -4.06668 </x-m>
+      <y-m>  0.00000 </y-m>
+      <z-m> -0.79214 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Pilote -->
+  <model>
+    <path>Aircraft/Piaggio-P166/Models/Pilot/pilot.xml</path>
+    <offsets>
+      <x-m> -3.74 </x-m>
+      <y-m> -0.35 </y-m>
+      <z-m> -1.08 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Piaggio-P166/Models/Interior/Seats/seat.xml</path>
+    <offsets>
+      <x-m> -3.35 </x-m>
+      <y-m> -0.36 </y-m>
+      <z-m> -1.01 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Piaggio-P166/Models/Interior/Seats/seat.xml</path>
+    <offsets>
+      <x-m> -3.35 </x-m>
+      <y-m>  0.36 </y-m>
+      <z-m> -1.01 </z-m>
+    </offsets>
+  </model>
+  
+  <!-- Pilot pedals
+  <model>
+    <path>Aircraft/Piaggio-P166/Models/Interior/Panel/Instruments/Pedals/pedals.xml</path>
+    <offsets>
+      <x-m> -3.818 </x-m>
+      <y-m> -0.301 </y-m>
+      <z-m> -1.543 </z-m>
+    </offsets>
+  </model> -->
+
+  <!-- Copilot pedals
+  <model>
+    <path>Aircraft/Piaggio-P166/Models/Interior/Panel/Instruments/Pedals/pedals.xml</path>
+    <offsets>
+      <x-m> -3.818 </x-m>
+      <y-m>  0.301 </y-m>
+      <z-m> -1.543 </z-m>
+    </offsets>
+  </model> -->
+
+  <!-- Les portes -->
+  <animation>
+    <name>IntPorteCrewGauche</name>
+    <object-name>intporteG</object-name>
+    <object-name>intvitreporteG</object-name>
+  </animation>
+  
+  <animation>
+    <type>pick</type>
+    <object-name>IntPorteCrewGauche</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>nasal</command>
+        <script>doors.crew.toggle();</script>
+      </binding>
+    </action>
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>IntPorteCrewGauche</object-name>
+    <property>sim/model/door-positions/crew/position-norm</property>
+    <factor> -70 </factor>
+    <axis>
+      <x1-m> -3.97336 </x1-m>
+      <y1-m> -0.68316 </y1-m>
+      <z1-m> -1.46115 </z1-m>
+      <x2-m> -3.96149 </x2-m>
+      <y2-m> -0.67606 </y2-m>
+      <z2-m> -1.02804 </z2-m>
+    </axis>
+  </animation>
+  
+  <animation>
+    <name>IntPorteCrewDroite</name>
+    <object-name>intporteD</object-name>
+    <object-name>intvitreporteD</object-name>
+  </animation>
+  
+  <animation>
+    <type>pick</type>
+    <object-name>IntPorteCrewDroite</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>nasal</command>
+        <script>doors.passenger.toggle();</script>
+      </binding>
+    </action>
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>IntPorteCrewDroite</object-name>
+    <property>sim/model/door-positions/passenger/position-norm</property>
+    <factor> 70 </factor>
+    <axis>
+      <x1-m> -3.97336 </x1-m>
+      <y1-m>  0.68316 </y1-m>
+      <z1-m> -1.46115 </z1-m>
+      <x2-m> -3.96149 </x2-m>
+      <y2-m>  0.67606 </y2-m>
+      <z2-m> -1.02804 </z2-m>
+    </axis>
+  </animation>
+  
+  <animation>
+    <name>IntPorteBaieA</name>
+    <object-name>intbaieA</object-name>
+    <object-name>intvitrebaieA</object-name>
+  </animation>
+  
+  <animation>
+    <type>pick</type>
+    <object-name>IntPorteBaieA</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>nasal</command>
+        <script>doors.cargo.toggle();</script>
+      </binding>
+    </action>
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>IntPorteBaieA</object-name>
+    <property>sim/model/door-positions/cargo/position-norm</property>
+    <factor> -70 </factor>
+    <axis>
+      <x1-m> -3.09073 </x1-m>
+      <y1-m> -0.77442 </y1-m>
+      <z1-m> -1.60272 </z1-m>
+      <x2-m> -3.07534 </x2-m>
+      <y2-m> -0.76457 </y2-m>
+      <z2-m> -0.90860 </z2-m>
+    </axis>
+  </animation>
+  
+  <animation>
+    <name>IntPorteBaieB</name>
+    <object-name>intbaieB</object-name>
+    <object-name>intvitrebaieB</object-name>
+  </animation>
+  
+  <animation>
+    <type>pick</type>
+    <object-name>IntPorteBaieB</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>nasal</command>
+        <script>doors.cargo.toggle();</script>
+      </binding>
+    </action>
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>IntPorteBaieB</object-name>
+    <property>sim/model/door-positions/cargo/position-norm</property>
+    <factor> 70 </factor>
+    <axis>
+      <x1-m> -1.70571 </x1-m>
+      <y1-m> -0.80247 </y1-m>
+      <z1-m> -1.62615 </z1-m>
+      <x2-m> -1.68984 </x2-m>
+      <y2-m> -0.79026 </y2-m>
+      <z2-m> -0.91031 </z2-m>
+    </axis>
+  </animation>
+  
+</PropertyList>
