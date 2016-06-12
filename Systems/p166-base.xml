@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <sim include="views.xml">
+
+    <fuel-fraction>1.0</fuel-fraction>
+
+    <startup>
+      <splash-texture>Aircraft/Piaggio-P166/p166-splash.png</splash-texture>
+    </startup>
+
+    <sound>
+      <path>Aircraft/Piaggio-P166/Sounds/p166-sound.xml</path>
+    </sound>
+
+    <model>
+      <path>Aircraft/Piaggio-P166/Models/p166.xml</path>
+      <show-immat type="bool">1</show-immat>
+      <livery>
+        <file type="string">default</file>
+      </livery>
+      <hide-radar>true</hide-radar>
+      <hide-yoke>true</hide-yoke>
+    </model>
+
+    <multiplay>
+      <chat_display>1</chat_display>
+      <generic> 
+        <int   n="0"  type="int">  0 </int>                                      <!-- 0 immat -->
+        <int   n="1"  type="int">  0 </int>                                      <!-- 1 immat -->
+        <int   n="2"  type="int">  0 </int>                                      <!-- 2 immat -->
+        <int   n="3"  type="int">  0 </int>                                      <!-- 3 immat -->
+        <int   n="4"  type="int">  0 </int>                                      <!-- 4 immat -->
+        <int   n="5"  type="int">  0 </int>                                      <!-- 5 immat -->
+        <int   n="6"  type="bool"> 1 </int>                                      <!-- 6 smoke/bomb/torpedo -->
+        <int   n="7"  type="bool" alias="/model/show-radar"> 1 </int>            <!-- 7 Show radar -->
+        <int   n="8"  alias="/systems/electrical/outputs/nav-lights">  0 </int>  <!-- 8 nav-lights -->
+        <int   n="9"  alias="/sim/model/lights/beacon/state">  false </int>      <!-- 9 strobe-lights -->
+        <int   n="10" alias="/controls/electric/key-pos">  0 </int>              <!-- 10 key position -->
+        <int   n="11" type="bool" alias="/model/show-yoke"> 1 </int>             <!-- 7 Show yokes -->
+        <float n="0"  alias="/sim/model/door-positions/crew/position-norm"/>
+        <float n="1"  alias="/sim/model/door-positions/passenger/position-norm"/>
+        <float n="2"  alias="/position/gear-agl-m"> 0 </float>                 <!-- altitude for MP shadow -->
+        <float n="3"  alias="/position/altitude-ft"> 0 </float>                <!-- altitude for Smoke/Trail -->
+        <float n="4"  alias="/sim/model/door-positions/cargo/position-norm"/>
+        <float n="6"  alias="/engines/engine[0]/rpm"/>
+        <float n="7"  alias="/engines/engine[0]/cranking"/>
+        <float n="8"  alias="/engines/engine[1]/rpm"/>
+        <float n="9"  alias="/engines/engine[1]/cranking"/>
+        <float n="10" alias="/gear/gear[0]/wow/"/>
+        <float n="11" alias="/gear/gear[1]/wow/"/>
+        <float n="12" alias="/gear/gear[2]/wow/"/>
+        <float n="13" alias="/gear/gear[0]/rollspeed-ms"/>
+        <float n="14" alias="/gear/gear[1]/rollspeed-ms"/>
+        <float n="15" alias="/gear/gear[2]/rollspeed-ms"/>
+        <!-- For Bombable -->
+        <int type="int" n="10" alias="controls/armament/trigger">0</int>
+        <string n="9" type="string" />
+      </generic>
+    </multiplay>
+    
+    <p166 include="p166.xml"/>
+    
+    <help include="help.xml"/>
+
+    <flaps include="flaps.xml"/>
+    
+    <menubar include="../Dialogs/p166-menu.xml"/>
+    
+  </sim>
+
+  <input include="p166-keyboard.xml"/>
+  
+  <systems include="systems.xml"/>
+  
+  <engines include="engines.xml"/>
+
+  <instrumentation include="instrumentation.xml"/>
+  
+  <controls include="controls.xml"/>
+
+  <autopilot include="autopilot.xml"/>
+
+  <nasal>
+    <doors>
+      <file>Aircraft/Piaggio-P166/Nasal/doors.nas</file>
+    </doors>
+    <p166>
+      <file>Aircraft/Piaggio-P166/Nasal/liveries.nas</file>
+      <file>Aircraft/Piaggio-P166/Nasal/light.nas</file>
+      <file>Aircraft/Piaggio-P166/Nasal/immat.nas</file>
+      <file>Aircraft/Piaggio-P166/Nasal/fuel-pump.nas</file>
+      <file>Aircraft/Piaggio-P166/Nasal/Electrical.nas</file>
+      <file>Aircraft/Piaggio-P166/Nasal/Systems.nas</file>
+    </p166>
+    <kns80>
+      <file>Aircraft/Piaggio-P166/Models/Interior/Panel/Instruments/kns80/kns80.nas</file>
+    </kns80>
+    <kap140>
+      <file>Aircraft/Piaggio-P166/Models/Interior/Panel/Instruments/kap140/autopilot/kap140.nas</file>
+      <!-- We can set some variables that might be
+           aircraft specific. We must do it after the file
+           to override the ones that are in the .nas file.
+      
+           gsNeedleDeflection = "/instrumentation/nav/gs-needle-deflection";
+      -->
+      <script>
+        <![CDATA[ 
+        headingNeedleDeflection = "/instrumentation/nav/heading-needle-deflection";
+        gsNeedleDeflection = "/instrumentation/nav/gs-needle-deflection-norm";
+        staticPressure = "systems/static/pressure-inhg";
+        ]]>
+      </script>
+    </kap140>
+    <kr87>
+      <file>Aircraft/Piaggio-P166/Models/Interior/Panel/Instruments/kr87-adf/kr87.nas</file>
+    </kr87>
+  </nasal>
+
+</PropertyList>
