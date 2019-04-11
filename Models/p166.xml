@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml version="1.0" encoding="UTF-8"?>
 
 <PropertyList>
 
@@ -56,7 +56,7 @@
     <object-name>porteD</object-name>
     <object-name>baieA</object-name>
     <object-name>baieB</object-name>
-    <object-name>tank</object-name>
+    <object-name>tanks</object-name>
     <object-name>porteA</object-name>
     <object-name>porteAG</object-name>
     <object-name>porteAD</object-name>
@@ -109,7 +109,7 @@
     <object-name>porteD</object-name>
     <object-name>baieA</object-name>
     <object-name>baieB</object-name>
-    <object-name>tank</object-name>
+    <object-name>tanks</object-name>
     <object-name>porteA</object-name>
     <object-name>porteAG</object-name>
     <object-name>porteAD</object-name>
@@ -159,7 +159,7 @@
     <object-name>porteD</object-name>
     <object-name>baieA</object-name>
     <object-name>baieB</object-name>
-    <object-name>tank</object-name>
+    <object-name>tanks</object-name>
     <object-name>porteA</object-name>
     <object-name>porteAG</object-name>
     <object-name>porteAD</object-name>
@@ -273,7 +273,7 @@
     </offsets>
   </model>
   
-  <!-- Les hélices -->
+  <!-- Les hÃ©lices -->
   <animation>
     <name>HeliceGauche</name>
     <object-name>bolG</object-name>
@@ -282,7 +282,7 @@
     <object-name>propblurG</object-name>
   </animation>
 
-  <!-- Séléction de l'objet visible en fonction des rpm -->
+  <!-- SÃ©lÃ©ction de l'objet visible en fonction des rpm -->
   <animation>
     <type>select</type>
     <object-name>propdiscG</object-name>
@@ -353,7 +353,7 @@
     <object-name>propblurD</object-name>
   </animation>
   
-  <!-- Séléction de l'objet visible en fonction des rpm -->
+  <!-- SÃ©lÃ©ction de l'objet visible en fonction des rpm -->
   <animation>
     <type>select</type>
     <object-name>propdiscD</object-name>
@@ -613,7 +613,7 @@
     </axis>
   </animation>
 
-  <!-- Rentré des roues -->
+  <!-- RentrÃ© des roues -->
   <animation>
     <name>TrainAvant</name>
     <object-name>axeA</object-name>
