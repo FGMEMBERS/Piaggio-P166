@@ -9,5 +9,3 @@ alitaila
 These liveries were made by : Enrico CASTALDI 2016
 
 Thanks to him
-
-Dark Gray, Red liveries by Bruce McL
